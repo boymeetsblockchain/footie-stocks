@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "footie-stocks",
+    "scheme": "footie-stocks",
     "slug": "footie-stocks",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,10 +19,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.hasashi.footiestocks"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8be4a3d7-db10-453a-bb6b-377b03df785c"
+      }
     }
   }
 }
