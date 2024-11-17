@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  Pressable,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { TextWrapper } from "../textwrapper";
@@ -29,15 +30,11 @@ export const Header = () => {
         </TouchableOpacity>
 
         {/* Search Bar */}
-        <View
+        <Pressable
+          onPress={() => router.push("/player/search")}
           style={tw`flex-1 flex-row items-center bg-[#F0F5FA] rounded-lg px-3 mx-3`}
         >
-          <Ionicons
-            name="search-outline"
-            size={16}
-            color="gray"
-            onPress={() => router.push("/player/search")}
-          />
+          <Ionicons name="search-outline" size={16} color="gray" />
           <TextInput
             placeholder="Search Player"
             placeholderTextColor="gray"
@@ -46,7 +43,7 @@ export const Header = () => {
               tw`flex-1 ml-2 py-0.5 w-full text-base text-black`,
             ]}
           />
-        </View>
+        </Pressable>
 
         {/* Notification Icon */}
         <View style={tw`flex-row`}>

@@ -48,24 +48,26 @@ function PlayerCard({
 }: PlayerCardProps) {
   return (
     <Pressable style={tw`mt-2`} onPress={() => router.push("/player/view")}>
-      <View style={tw`flex-row gap-x-2 items-center`}>
-        <Image
-          source={image}
-          style={tw`w-8 h-8`}
-          accessibilityLabel={`${name} image`}
-        />
-        <View>
-          <TextWrapper fontWeight="bold" textSize="xs">
-            {name}
-          </TextWrapper>
-          <TextWrapper textSize="xs" color="gray">
-            Position:{" "}
-            <TextWrapper textSize="xs" fontWeight="bold">
-              {position}
+      <View style={tw`flex-row justify-between bg-gray-50 py-2 items-center`}>
+        <View style={tw`flex-row gap-x-2`}>
+          <Image
+            source={image}
+            style={tw`w-8 h-8`}
+            accessibilityLabel={`${name} image`}
+          />
+          <View style={tw` gap-y-1`}>
+            <TextWrapper fontWeight="bold" textSize="xs">
+              {name}
             </TextWrapper>
-          </TextWrapper>
+            <TextWrapper textSize="xs" color="gray">
+              Position:{" "}
+              <TextWrapper textSize="xs" fontWeight="bold">
+                {position}
+              </TextWrapper>
+            </TextWrapper>
+          </View>
         </View>
-        <View>
+        <View style={tw`mr-16`}>
           <TextWrapper fontWeight="bold" textSize="xs">
             24 Hours Change
           </TextWrapper>
@@ -105,9 +107,7 @@ export default function SearcHPage() {
           <TextWrapper fontWeight="bold" textSize="xl">
             Recommend Clubs
           </TextWrapper>
-          <View
-            style={tw`flex-row gap-x-2 items-center justify-center w-full mt-1`}
-          >
+          <View style={tw`flex-row  justify-around  w-full mt-1`}>
             <ClubCard
               image={require("../../assets/mancity.png")}
               name="Man City"
