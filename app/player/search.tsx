@@ -107,7 +107,7 @@ export default function SearcHPage() {
           <TextWrapper fontWeight="bold" textSize="xl">
             Recommend Clubs
           </TextWrapper>
-          <View style={tw`flex-row  justify-around  w-full mt-1`}>
+          <View style={tw`flex-row  justify-between   w-full mt-1`}>
             <ClubCard
               image={require("../../assets/mancity.png")}
               name="Man City"
@@ -118,11 +118,14 @@ export default function SearcHPage() {
               name="Liverpool"
               goals={20}
             />
-            <ClubCard
-              image={require("../../assets/chelsea.png")}
-              name="Chelsea"
-              goals={20}
-            />
+
+            <View style={tw`mr-15`}>
+              <ClubCard
+                image={require("../../assets/chelsea.png")}
+                name="Chelsea"
+                goals={20}
+              />
+            </View>
           </View>
 
           <TextWrapper fontWeight="bold" textSize="xl">
